@@ -14,8 +14,8 @@ Now we're going to take some time to practice writing some simple Java programs.
 Now, you will create additional classes that represent the different components of a car - the engine, the fuel tank, the wheels, etc. These classes should have methods related to their behaviors, and properties representing their various states (an engine is running or not, tires have levels of wear, etc).
 
 1. Every class representing a car part should inherit from a superclass called "CarPart." The CarPart class will have at least the following states and behaviors:
- 1. condition - an integer that represents the remaining durability of the part (starts at 100, goes down to 0 when the part is broken)
- 2. status() - a method that prints the condition of the part to the console.
+ - condition - an integer that represents the remaining durability of the part (starts at 100, goes down to 0 when the part is broken)
+ - status() - a method that prints the condition of the part to the console.
 2. The CarPart class should also implement a Functional interface, which declares a method "function()".
 3. Each subclass of CarPart should have at least one state unique to that part (like the number of cylinders in an engine, or the fuel level of a fuel tank). Each subclass should also implement the inherited function() method to print a unique message to the console that incorporates the variables unique to that class. The CarPart subclasses should not define unique methods, unless those methods are called from their overriden function() or status() methods.
 4. Make sure that your Car class creates an instance of each CarPart subclass, as part of its constructor. These instances should be added to a collection of CarPart reference variables.
